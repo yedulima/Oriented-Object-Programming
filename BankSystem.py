@@ -1,5 +1,4 @@
 from random import randint
-import sys
 
 class Bank:
     numUsers = 0
@@ -98,10 +97,8 @@ if __name__ == '__main__':
                     userId = input("Enter user id or enter 0 to exit: ").strip()
                     if userId == '0':
                         break
-                    elif int(userId) in Bank.users:
-                        print(getattr(sys.modules[__name__], Bank.users[int(userId)]), type(getattr(sys.modules[__name__], Bank.users[int(userId)])))
-                        print(Bank.users[int(userId)], type(Bank.users[int(userId)]))
-                        #print(Bank.users[int(userId)].showWalletMoney())
+                    elif int(userId) in Bank.users: #Fix this to make it possible to access money from a specific user's wallet
+                        pass
             else:
                 print('\nNo user registered yet.')
         else:
